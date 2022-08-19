@@ -108,5 +108,4 @@ async def _help(ctx):
         monsur = '```PPE:\n- init set channel "Character" new "mode" @user\n- ppe @user status dead\nCHANNELS:\n- init create channel "channel-name"\n- delete #channel (Admin)\n-A:\n- L```'
         await ctx.send(monsur)
 client = MyClient(intents=intents)
-bot.run('MTAxMDA2MTY2MTQwMDQ3Nzc0Ng.GvG0Kk.8YWJNuEdfSt2QM0meGNpFasaYFPXYXpyW8JBG4')
-#client.run('MTAxMDA2MTY2MTQwMDQ3Nzc0Ng.GvG0Kk.8YWJNuEdfSt2QM0meGNpFasaYFPXYXpyW8JBG4')
+bot.run(open("token", "r").read().strip())
