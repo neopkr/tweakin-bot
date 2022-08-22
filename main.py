@@ -38,6 +38,10 @@ async def init(ctx, *args):
             mode = args[4]
             if args[5] == "group":
                 user = "group"
+            elif args[5] == "community":
+                user = "community"
+                _global = f'{user}-{mode}-{channelName}'
+                await guild.create_text_channel(_global, category=myList[3])
             else:
                 _user = str(args[5]).replace("@", "").replace("<", "").replace(">", "").strip()
                 userPurge = await ctx.message.guild.fetch_member(int(_user))
