@@ -70,6 +70,7 @@ async def BotUpdate(ctx):
     if ctx.message.author.id == neokeeeID:
         await ctx.send("Checking for updates")
         await fetch.compareVersion(ctx)
+    else: await ctx.send("You don't have permission to do that.")
 @bot.command(name="https://tenor.com/view/monkey-monkey-gif-gif-monkey-meme-monkey-gif-funny-gif-21180838")
 async def clear(ctx):
     message = ctx.message
